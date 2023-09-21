@@ -9,6 +9,8 @@
 <body>
     <?php
     if (array_key_exists('enviar', $_POST)){
+      if ($_REQUEST ['Apellido'] != "")
+    {
       echo "El apellido Ingresado es: $_REQUEST[Apellido]";
     }
     else
