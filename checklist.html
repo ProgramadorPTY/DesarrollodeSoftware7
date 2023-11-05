@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checklist de Tareas</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1>Checklist de Tareas</h1>
+<!-- Formulario para agregar una nueva tarea -->
+<form method="post" action="agregar_tarea.php">
+<label for="titulo">Título:</label>
+<input type="text" name="titulo" required>
+<br>
+<label for="descripcion">Descripción:</label>
+<textarea name="descripcion"></textarea>
+<br>
+<label for="estado">Estado:</label>
+<select name="estado">
+<option value="Por Hacer">Por Hacer</option>
+<option value="En Progreso">En Progreso</option>
+<option value="Terminada">Terminada</option>
+</select>
+<br>
+<label for="fecha_compromiso">Fecha de Compromiso:</label>
+<input type="datetime-local" name="fecha_compromiso">
+<br>
+<label for="responsable">Responsable:</label>
+<input type="text" name="responsable">
+<br>
+<label for="tipo_tarea">Tipo de Tarea:</label>
+<input type="text" name="tipo_tarea">
+<br>
+<input type="submit" value="Agregar Tarea">
+</form>
+ 
+    <!-- Lista de tareas por hacer -->
+<h2>Tareas por hacer</h2>
+<div class="tareas" id="por_hacer">
+<!-- Tareas por hacer se cargarán aquí desde PHP -->
+</div>
+ 
+    <!-- Lista de tareas en progreso -->
+<h2>Tareas en progreso</h2>
+<div class="tareas" id="en_progreso">
+<!-- Tareas en progreso se cargarán aquí desde PHP -->
+</div>
+ 
+    <!-- Lista de tareas terminadas -->
+<h2>Tareas terminadas</h2>
+<div class="tareas" id="terminadas">
+<!-- Tareas terminadas se cargarán aquí desde PHP -->
+</div>
+ 
+</body>
+</html>
